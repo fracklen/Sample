@@ -19,7 +19,7 @@
     <td><%= account.invalidated_at %></td>
     <td><%= link_to 'Show', :controller => "accounts", :action => "show", :id => account.id %></td>
     <td><%= link_to 'Edit', edit_account_path(account) %></td>
-    <td><%= link_to 'Destroy', destroy_account_path(account), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', :controller => "accounts", :action => "destroy", :id => account.id, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
