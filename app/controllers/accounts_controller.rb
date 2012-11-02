@@ -29,13 +29,13 @@ class AccountsController < ApplicationController
   end
 
   def edit
-    @account = User.find(params[:id])
+    @account = Account.find(params[:id])
   end
 
   def update
-    @account = User.find(params[:id])
+    @account = Account.find(params[:id])
     if @account.update_attributes(params[:account])
-      redirect_to @account, :notice => 'Account was created'
+      redirect_to :controller => "accounts", :action => "index", :notice => 'Account was created'
     else
       render :action => :edit
     end
