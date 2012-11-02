@@ -17,7 +17,7 @@ class AccountsController < ApplicationController
     @account = Account.new(params[:account])
     
     if @account.save
-      redirect_to @account, :notice => "User was successfully created."
+      redirect_to :controller => "accounts", :action => "index", :notice => "User was successfully created."
     else
       render :action => :new
     end
