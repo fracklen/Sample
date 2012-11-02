@@ -6,6 +6,7 @@ class CreateAccounts < ActiveRecord::Migration
       t.datetime :invalidated_at
 
       t.timestamps
+    end
   end
 
   def down
