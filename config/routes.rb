@@ -1,4 +1,9 @@
 Sample::Application.routes.draw do
+  #get "account/index"
+
+  #get "account/new"
+  resources :accounts
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

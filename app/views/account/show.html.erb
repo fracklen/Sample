@@ -1,0 +1,15 @@
+<p class="notice"><%= notice %></p>
+ 
+<p>
+  <b>Username:</b>
+  <%= @account.username %>
+</p>
+ 
+<p>
+  <b>Invalidated</b>
+  <%= @account.invalidated_at %>
+</p>
+ 
+ 
+<%= link_to 'Edit', edit_account_path(@user) %> |
+<%= link_to 'Back', accounts_path %>
