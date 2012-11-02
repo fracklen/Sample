@@ -1,8 +1,12 @@
 Sample::Application.routes.draw do
-  #get "account/index"
+  get "account/index"
 
-  #get "account/new"
-  resources :accounts
+  get "account/new"
+
+  get "account/show"
+  post "account/update"
+  post "account/create"
+  delete "account/destroy"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
