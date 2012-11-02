@@ -17,7 +17,7 @@ class AccountsController < ApplicationController
     @account = Account.new(params[:account])
     
     if @account.save
-      redirect_to {:controller => "accounts", :action => "index"}, :notice => "User was successfully created."
+      redirect_to accounts_path, :notice => "User was successfully created."
     else
       render :action => :new
     end
@@ -35,7 +35,7 @@ class AccountsController < ApplicationController
   def update
     @account = Account.find(params[:id])
     if @account.update_attributes(params[:account])
-      redirect_to {:controller => "accounts", :action => "index"}, :notice => 'Account was created'
+      redirect_to accounts_path, :notice => 'Account was created'
     else
       render :action => :edit
     end
