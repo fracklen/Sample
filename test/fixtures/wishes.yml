@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  person_id: MyString
+  priority: 1
+  name: MyString
+  note: MyString
+  cancelled_at: 2013-02-24 21:56:14
+
+two:
+  person_id: MyString
+  priority: 1
+  name: MyString
+  note: MyString
+  cancelled_at: 2013-02-24 21:56:14

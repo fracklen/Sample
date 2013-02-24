@@ -1,0 +1,13 @@
+<h1>Ønskeliste</h1>
+
+<% @people.each do |person| %>
+  <h2><%= person.name %></h2>
+  <ul>
+    <% person.wishes.each do |wish| %>
+      <li>
+        <%= wish.name %>
+      </li>
+    <% end %>
+  </ul>
+
+<% end %>

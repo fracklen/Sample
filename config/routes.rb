@@ -1,4 +1,22 @@
 Sample::Application.routes.draw do
+  get "wish/create"
+
+  get "wish/update"
+
+  get "wish/delete"
+
+  get "wish_list/index"
+
+  get "person/index"
+
+  get "person/show"
+
+  get "person/update"
+
+  get "person/create"
+
+  get "person/delete"
+
   #get "account/index"
 
   #get "account/new"
