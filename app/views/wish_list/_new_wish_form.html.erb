@@ -1,0 +1,13 @@
+<div class="new-wish-form">
+  <%= form_tag( {:controller => "wish", :action => "create"}, :method => :post, :remote => true, :id => "new-wish-for-#{person.id}") do %>
+    <%= label_tag :name %>
+    <%= text_field_tag :name %>
+    <%= hidden_field_tag :person_id, person.id %>
+    <%= submit_tag %>
+  <% end %>
+</div>
+<script type="text/javascript">
+$('#new-wish-for-<%= person.id %>').bind('ajax:success', function() {
+  $('#new-wish-for-<%= person.id %> > input[name=name]').val('');
+});
+</script>

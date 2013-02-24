@@ -2,7 +2,7 @@
 
 <% @people.each do |person| %>
   <h2><%= person.name %></h2>
-  <ul>
+  <ul class="valid-wishes" id="valid-for-<%= person.id%>">
     <% person.wishes.select {|wish| wish.cancelled_at == nil }.each do |wish| %>
       <li>
         <%= wish.name %>
@@ -12,10 +12,12 @@
 
   <ul>
     <% person.wishes.select {|wish| wish.cancelled_at != nil }.each do |wish| %>
-      <li style="text-decoration: line-through">
+      <li class="wish-cancelled">
         <%= wish.name %>
       </li>
     <% end %>
   </ul>
 
+  <%= render :partial => "new_wish_form", :locals => {:person => person} %>
+  <hr/>
 <% end %>

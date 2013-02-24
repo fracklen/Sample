@@ -1,9 +1,9 @@
 Sample::Application.routes.draw do
-  get "wish/create"
+  post "wish/create"
 
-  get "wish/update"
+  post "wish/update"
 
-  get "wish/delete"
+  delete "wish/delete"
 
   get "wish_list/index"
 
