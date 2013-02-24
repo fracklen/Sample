@@ -3,8 +3,16 @@
 <% @people.each do |person| %>
   <h2><%= person.name %></h2>
   <ul>
-    <% person.wishes.each do |wish| %>
+    <% person.wishes.select {|wish| wish.cancelled_at == nil }.each do |wish| %>
       <li>
+        <%= wish.name %>
+      </li>
+    <% end %>
+  </ul>
+
+  <ul>
+    <% person.wishes.select {|wish| wish.cancelled_at != nil }.each do |wish| %>
+      <li style="text-decoration: line-through">
         <%= wish.name %>
       </li>
     <% end %>
