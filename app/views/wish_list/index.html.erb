@@ -1,23 +1,21 @@
 <h1>Ønskeliste</h1>
 
 <% @people.each do |person| %>
+  <section id="valid-for-<%= person.id%>">
   <h2><%= person.name %></h2>
-  <ul class="valid-wishes" id="valid-for-<%= person.id%>">
+  <ul class="valid-wishes">
     <% person.wishes.select {|wish| wish.cancelled_at == nil }.each do |wish| %>
-      <li>
-        <%= wish.name %>
-      </li>
+      <%= render :partial => "wishes/wish", :locals => {:wish => wish} %>
     <% end %>
   </ul>
 
-  <ul>
+  <ul class="cancelled-wishes">
     <% person.wishes.select {|wish| wish.cancelled_at != nil }.each do |wish| %>
-      <li class="wish-cancelled">
-        <%= wish.name %>
-      </li>
+      <%= render :partial => "wishes/wish", :locals => {:wish => wish} %>
     <% end %>
   </ul>
 
   <%= render :partial => "new_wish_form", :locals => {:person => person} %>
+</section>
   <hr/>
 <% end %>

@@ -1,21 +1,21 @@
 Sample::Application.routes.draw do
-  post "wish/create"
+ 
+  resources :wishes do
+    post :cancel
+  end
+    
 
-  post "wish/update"
-
-  delete "wish/delete"
 
   get "wish_list/index"
 
-  get "person/index"
+  resource :person do 
+    get :index
+    get :show
+    get :update
+    get :create
+    get :delete
+  end
 
-  get "person/show"
-
-  get "person/update"
-
-  get "person/create"
-
-  get "person/delete"
 
   #get "account/index"
 
@@ -76,7 +76,7 @@ Sample::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'accounts#index'
+  root :to => 'wish_list#index'
 
   # See how all your routes lay out with "rake routes"
 

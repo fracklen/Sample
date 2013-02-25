@@ -1,0 +1,1 @@
+$("#valid-for-<%= @person.id%> > ul.valid-wishes").append('<%= escape_javascript(render :partial => "wish", :locals => {:wish => @wish}) %>');

@@ -1,0 +1,2 @@
+$('#wish-<%=@wish.id%>').remove();
+$("#valid-for-<%= @person.id%> > ul.cancelled-wishes").append('<%= escape_javascript(render :partial => "wish", :locals => {:wish => @wish}) %>');
