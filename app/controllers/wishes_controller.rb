@@ -1,5 +1,5 @@
 class WishesController < ApplicationController
-  def new
+  def create
     @person = Person.find(params[:person_id])
 
     if @person
