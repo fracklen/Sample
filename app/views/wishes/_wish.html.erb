@@ -1,9 +1,10 @@
 <li id="wish-<%=wish.id%>">
   <%= wish.name %>
-
-  <% if wish.cancelled_at.nil? %>
-    <%= link_to "cancel", wish_cancel_path(wish), :method => :post, :remote => true %>
-  <% else %>
-    <%= link_to "delete", wish_path(wish), :method => :delete, :remote => true %>
+  <% if current_user.present? %>
+    <% if wish.cancelled_at.nil? %>
+      <%= link_to "cancel", wish_cancel_path(wish), :method => :post, :remote => true %>
+    <% else %>
+      <%= link_to "delete", wish_path(wish), :method => :delete, :remote => true %>
+    <% end %>
   <% end %>
 </li>

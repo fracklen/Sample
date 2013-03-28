@@ -1,5 +1,11 @@
 Sample::Application.routes.draw do
  
+  get "login/index"
+
+  get "login/logout"
+
+  post "login/login"
+
   resources :wishes do
     post :cancel
   end
