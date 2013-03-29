@@ -7,6 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="session-data">
+    <% if current_user.present? %>
+      <span class="session-username">Logged in as <%= current_user.username %></span>
+      <%= link_to "logout", logout_session_path %>
+    </div>
+    <% else %>
+      <%= link_to "login", session_path %>
+    <% end %>
+  </div>
 <div id="notice"><%=notice%></div>
 <%= yield %>
 

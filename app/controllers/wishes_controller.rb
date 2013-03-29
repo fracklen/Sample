@@ -1,4 +1,6 @@
 class WishesController < ApplicationController
+  before_filter :validate_user
+
   def create
     @person = Person.find(params[:person_id])
 

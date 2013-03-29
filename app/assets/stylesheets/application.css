@@ -11,3 +11,13 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+
+}
+
+.session-data {
+  position: fixed;
+  right: 5px;
+  top: 5px;
+}

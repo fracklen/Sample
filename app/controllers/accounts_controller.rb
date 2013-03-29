@@ -1,4 +1,6 @@
 class AccountsController < ApplicationController
+  before_filter :validate_user
+
   def index
     @accounts = Account.all
     
