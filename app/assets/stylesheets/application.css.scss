@@ -21,3 +21,25 @@ body {
   right: 5px;
   top: 5px;
 }
+
+ul {
+
+  li {
+
+    div {
+      display: inline-block;
+    }
+
+    a {
+      display: inline-block;
+    }
+  }
+
+}
+
+div.new-wish-form {
+/*  display: block;
+  float: left;
+  clear: left;
+*/
+}

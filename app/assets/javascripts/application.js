@@ -13,3 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+function edit_wish(wish_id){
+  $('li[data-wish='+wish_id+'] > .wish-edit-form').toggle();
+  $('li[data-wish='+wish_id+'] > .wish-name').toggle();
+  $('li[data-wish='+wish_id+'] > a').toggle();
+}

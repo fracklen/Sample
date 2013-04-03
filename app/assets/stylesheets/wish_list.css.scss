@@ -4,6 +4,11 @@
 
 ul.cancelled-wishes {
   li {
-    text-decoration: line-through;
+  
+    div.wish-name { 
+      text-decoration: line-through;
+      color: gray;
+    }
+    a {text-decoration: none;}
   }
 }

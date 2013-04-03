@@ -10,6 +10,8 @@ class WishesController < ApplicationController
   end
 
   def update
+    @wish = Wish.find(params[:id])
+    @wish.name = params[:name]
   end
 
   def cancel

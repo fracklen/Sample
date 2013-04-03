@@ -1,0 +1,4 @@
+$('li[data-wish=<%=@wish.id%>] > .wish-name').html('<%= @wish.name.html_safe %>');
+$('li[data-wish=<%=@wish.id%>] > .wish-name').toggle();
+$('li[data-wish=<%=@wish.id%>] > .wish-edit-form').toggle();
+$('li[data-wish=<%=@wish.id%>] > a').toggle();
