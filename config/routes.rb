@@ -8,6 +8,9 @@ Sample::Application.routes.draw do
   
   resources :wishes do
     post :cancel
+    collection do 
+      post :update_order
+    end
   end
     
 

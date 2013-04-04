@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require jquery-ui.min
 
 function edit_wish(wish_id){
   $('li[data-wish='+wish_id+'] > .wish-edit-form').toggle();

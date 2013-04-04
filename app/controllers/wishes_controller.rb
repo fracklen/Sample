@@ -25,4 +25,15 @@ class WishesController < ApplicationController
     @wish = Wish.find(params[:id])
     @wish.destroy
   end
+
+  def update_order
+    priorities = params[:priorities]
+    
+    priorities.each do |id, priority|
+      Wish.where(:id => id).update_all(:priority => priority)
+    end
+
+    render :nothing => true
+  end
+
 end

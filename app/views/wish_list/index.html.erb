@@ -34,3 +34,24 @@
 </section>
   <hr/>
 <% end %>
+
+<script type="text/javascript">
+  $('.valid-wishes').sortable({
+      update: function(event, ui){
+        list = $(event.target).find("li");
+        priorities = {};
+        index = 0;
+        list.each(function(index,elem){
+          priorities[$(elem).attr('data-wish')] = index; 
+          index++;
+        });
+
+        $.ajax({
+          url: '<%= update_order_wishes_path %>',
+          data: {"priorities": priorities},
+          method: "POST"
+        });
+      }
+    
+  });
+</script>
