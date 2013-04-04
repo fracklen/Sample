@@ -43,3 +43,13 @@ div.new-wish-form {
   clear: left;
 */
 }
+
+.ui-sortable {
+  li {
+    cursor: hand;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    
+  }
+}

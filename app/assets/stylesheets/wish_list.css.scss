@@ -4,10 +4,14 @@
 
 ul.cancelled-wishes {
   li {
-  
+    
+    // &:hover { cursor: -moz-grab; }
+    // &:active { cursor: -moz-grabbing; }
+
     div.wish-name { 
       text-decoration: line-through;
       color: gray;
+      cursor: inherit;
     }
     a {text-decoration: none;}
   }
